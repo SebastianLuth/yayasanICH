@@ -392,8 +392,8 @@ export default {
   },
   async created() {
     try {
-      const result = await axios.get("http://localhost:8080/api/products");
-      const result2 = await axios.get("http://localhost:8080/api/consultation");
+      const result = await axios.get("https://api-yayasan-ich.vercel.app/api/products");
+      const result2 = await axios.get("https://api-yayasan-ich.vercel.app/api/consultation");
       this.products = result.data;
       this.consultations = result2.data;
     } catch (error) {
