@@ -9,9 +9,9 @@
                 <button class="cta-button">Temukan Solusi Bisnismu &raquo;</button>
             </div>
             <div class="col-md-4">
-                <img :src="`http://localhost:8080${consultation.imageUrl}`" :alt="consultation.name" class="img-fluid">
-                <h2>Konsultasi IT</h2>
-                <p> Rating : 5</p>
+                <img :src="`${consultation.imageUrl}`" :alt="consultation.name" class="img-fluid">
+                <h2>{{consultation.name}}</h2>
+                <p> Rating : {{consultation.averageRating}}</p>
             </div>
         </div>
         <div class="mt-4">
@@ -48,7 +48,7 @@ export default {
   },
   async created() {
     const uniqName = this.$route.params.name;
-    const result = await axios.get(`http://localhost:8080/api/consultation/${uniqName}`)
+    const result = await axios.get(`https://api-yayasan-ich.vercel.app/api/consultation/${uniqName}`)
     this.consultation = result.data;
   },
 };
