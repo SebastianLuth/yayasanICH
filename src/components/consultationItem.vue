@@ -1,7 +1,7 @@
 <template>
     <div class="col">
       <div class="card h-100">
-        <img :src="`http://localhost:8080${consultation.imageUrl}`" class="card-img-top" alt="..." />
+        <img :src="`${consultation.imageUrl}`" class="card-img-top" alt="..." />
         <div class="card-body">
           <button class="btn no-hover mb-2 bg-custom2">
           <div class="d-flex align-items-center justify-content-center">
