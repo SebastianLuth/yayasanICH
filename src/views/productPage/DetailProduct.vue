@@ -89,7 +89,7 @@
               <div class="card card-body" style="width: 750px" id="course-info">
                 <div id="about-course">
                   <h5>About Course</h5>
-                  <div v-html="product.longDescription"></div>
+                  <div v-html="product.description"></div>
                 </div>
                 <div id="what-learn" class="mb-4 mt-4">
                   <h5>What I Will Learn</h5>
