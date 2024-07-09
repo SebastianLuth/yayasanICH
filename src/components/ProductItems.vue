@@ -2,7 +2,7 @@
   <div v-if="isAuthenticated" class="col">
     <div class="card h-100">
       <img
-        :src="`{product.imageUrl}`"
+        :src="`${product.imageUrl}`"
         class="card-img-top"
         alt="Gambar Product"
         height="250"
@@ -35,7 +35,7 @@
   <div v-else class="col">
     <div class="card h-100">
       <img
-        :src="`http://localhost:8080${product.imageUrl}`"
+        :src="`${product.imageUrl}`"
         class="card-img-top"
         alt="..."
       />
