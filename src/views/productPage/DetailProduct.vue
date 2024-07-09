@@ -9,7 +9,7 @@
         <div class="float-sm-end" style="width: 30%">
           <div id="page-wrap">
             <div id="img-wrap">
-              <img :src="`http://localhost:8080${product.imageUrl}`" />
+              <img :src="`${product.imageUrl}`" />
             </div>
             <div id="product-details">
               <h4>{{ product.name }}</h4>
@@ -148,7 +148,7 @@ export default {
   async created() {
     const uniqName = this.$route.params.name;
     const result = await axios.get(
-      `http://localhost:8080/api/products/${uniqName}`
+      `https://api-yayasan-ich.vercel.app/api/products/${uniqName}`
     );
     this.product = result.data;
   },
