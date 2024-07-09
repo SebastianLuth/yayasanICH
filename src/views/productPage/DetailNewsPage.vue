@@ -35,7 +35,7 @@
       <div v-for="news in viewsAllNews" :key="news.id">
         <div class="card" style="width: 18rem">
           <img
-            :src="`http://localhost:8080${news.image_one}`"
+            :src="`${news.image_one}`"
             class="card-img-top"
             alt="..."
           />
