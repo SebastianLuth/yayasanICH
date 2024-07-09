@@ -13,7 +13,7 @@
         </div>
         <button type="submit">Login</button>
       </form>
-      <p> Belum memiliki akun ? : <a href="#" style="text-decoration: none;">Daftar disini</a></p>
+      <p> Belum memiliki akun ? : <a href="/register" style="text-decoration: none;">Daftar disini</a></p>
     </div>
   </div>
 </template>
