@@ -4,7 +4,7 @@
       <h1>{{ news.judul }}</h1>
     </div>
     <div class="content">
-      <img :src="`http://localhost:8080${news.image_one}`" :alt="news.judul" />
+      <img :src="`${news.image_one}`" :alt="news.judul" />
       <div class="info">
         <span class="tanggal">{{ formatDate(news.tanggal_dibuat) }}</span>
       </div>
