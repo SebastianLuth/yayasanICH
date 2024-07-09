@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="text-center mt-4">
-            <a class="cta-button" style="width: 500px; border-radius: 10px;" href="https://wa.me/0813-6168-8917">Temukan Solusi Bisnismu &raquo;</a>
+            <a class="cta-button" style="width: 500px; border-radius: 10px;" href="https://wa.me/+6281361688917">Temukan Solusi Bisnismu &raquo;</a>
         </div>
     </div>
     <NotFound v-else />
