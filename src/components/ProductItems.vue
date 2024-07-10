@@ -59,7 +59,7 @@
         </router-link>
         <div>
           <i
-            class="fa-solid text-black"
+            class="text-black"
             style="font-size: 15px"
             >Rp.{{ product.price }}</i
           >
