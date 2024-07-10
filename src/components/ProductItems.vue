@@ -22,10 +22,10 @@
             <p class="text-white mb-0 me-2">Tambahkan ke Keranjang</p>
           </button>
         <div>
-          <i
-            class="fa-solid fa-dollar-sign text-black"
+           <p
+            class="text-black text-bold"
             style="font-size: 15px"
-            >{{ product.price }}</i
+            >Rp.{{ product.price }}</p
           >
         </div>
       </div>
@@ -59,7 +59,7 @@
         </router-link>
         <div>
           <p
-            class="text-black"
+            class="text-black text-bold"
             style="font-size: 15px"
             >Rp.{{ product.price }}</p
           >
