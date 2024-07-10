@@ -21,7 +21,7 @@
           </router-link>
           <div>
           <i
-            class="fa-solid fa-dollar-sign text-black"
+            class="fa-solid"
             style="font-size: 15px"
             >{{ consultation.price }}</i
           >
