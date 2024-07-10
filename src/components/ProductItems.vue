@@ -58,10 +58,10 @@
           </button>
         </router-link>
         <div>
-          <i
+          <p
             class="text-black"
             style="font-size: 15px"
-            >Rp.{{ product.price }}</i
+            >Rp.{{ product.price }}</p
           >
         </div>
       </div>
