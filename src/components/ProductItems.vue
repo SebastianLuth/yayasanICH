@@ -59,9 +59,9 @@
         </router-link>
         <div>
           <i
-            class="fa-solid fa-dollar-sign text-black"
+            class="fa-solid text-black"
             style="font-size: 15px"
-            >{{ product.price }}</i
+            >Rp.{{ product.price }}</i
           >
         </div>
       </div>
