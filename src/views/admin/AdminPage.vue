@@ -1,5 +1,6 @@
 <template>
-  <h1 style="text-align: start" class="mb-5">Semua Users</h1>
+  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <h1 style="text-align: start" class="mb-3">Semua Users</h1>
   <div v-if="orders.length > 0" id="admin">
     <div class="container">
       <table class="table table-striped" style="width: 100%">
@@ -45,6 +46,7 @@
         </tbody>
       </table>
     </div>
+  </div>
   </div>
 </template>
   
