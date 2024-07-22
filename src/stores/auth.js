@@ -151,7 +151,7 @@ export const useAuthStore = defineStore('auth', {
         throw error.message;
       }
     },
-    async midtransNotification(payload) {
+    async midtransNotification(payload) { 
       try {
         const { data } = await useApiPrivate().post(`/api/cart/midtrans-notification`, payload);
         return data;
@@ -217,6 +217,30 @@ export const useAuthStore = defineStore('auth', {
         throw error.message;
       }
     },
+    async removeProduct(productId) {
+      try {
+        const { data } = await useApiPrivate().delete(`/api/admin/product/${productId}`);
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async removeConsultation(consultationId) {
+      try {
+        const { data } = await useApiPrivate().delete(`/api/admin/consultation/${consultationId}`);
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async removeNews(newsId) {
+      try {
+        const { data } = await useApiPrivate().delete(`/api/admin/news/${newsId}`);
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
     async addProduct(payload) {
       try {
         const { data } = await useApiPrivate().post(`/api/admin/products`, payload, {
@@ -244,7 +268,24 @@ export const useAuthStore = defineStore('auth', {
     async viwesAllModules() {
       try{
       const { data } = await useApiPrivate().get('/api/admin/modules/getAllModules');
-      // console.log(data)
+      return data;
+      }catch (error){
+        throw error.message;
+      }
+    },
+    async viewsAllConsultation() {
+      try{
+      const { data } = await useApiPrivate().get('/api/admin/consultation/getAllConsultation');
+      console.log(data)
+      return data;
+      }catch (error){
+        throw error.message;
+      }
+    },
+    async viewsAllNews() {
+      try{
+      const { data } = await useApiPrivate().get('/api/admin/news/getAllNews');
+      console.log(data)
       return data;
       }catch (error){
         throw error.message;
@@ -265,6 +306,54 @@ export const useAuthStore = defineStore('auth', {
     async addNews(formData) {
       try {
         const { data } = await useApiPrivate().post(`/api/admin/addNews`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async updateModule(moduleId,payload) {
+      try {
+        const { data } = await useApiPrivate().put(`/api/admin/module/${moduleId}`,payload, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async updateProduct(productId,payload) {
+      try {
+        const { data } = await useApiPrivate().put(`/api/admin/product/${productId}`,payload, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async updateConsultation(consultationId,payload) {
+      try {
+        const { data } = await useApiPrivate().put(`/api/admin/consultation/${consultationId}`,payload, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+        return data;
+      } catch (error) {
+        throw error.message;
+      }
+    },
+    async updateNews(newsId,payload) {
+      try {
+        const { data } = await useApiPrivate().put(`/api/admin/news/${newsId}`,payload, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
