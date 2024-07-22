@@ -18,8 +18,8 @@
         </router-link>
         <router-link to="/admin/AllModulProduct" class="button">
           <span class="material-icons">library_books</span>
-          <span class="text">Semua Modul</span>
-        </router-link>
+          <span class="text">E-Course  & Modul</span>
+        </router-link>        
         <router-link to="/admin/addProduct" class="button">
           <span class="material-icons">inventory</span>
           <span class="text">Tambah Produk</span>
@@ -28,24 +28,17 @@
           <span class="material-icons">menu_book</span>
           <span class="text">Tambah Modul</span>
         </router-link>
-        <router-link to="/admin/addArticle" class="button">
-          <span class="material-icons">article</span>
-          <span class="text">Tambah Berita</span>
+        <router-link to="/admin/AllNews" class="button">
+          <span class="material-icons">newspaper</span>
+          <span class="text"> Berita</span>
         </router-link>
-        <router-link to="/admin/addConsultation" class="button">
+        <router-link to="/admin/AllConsultation" class="button">
           <span class="material-icons">support_agent</span>
-          <span class="text">Tambah Konsultasi</span>
+          <span class="text">Konsultasi</span>
         </router-link>
       </div>
   
       <div class="flex"></div>
-  
-      <div class="menu">
-        <router-link to="/settings" class="button">
-          <span class="material-icons">settings</span>
-          <span class="text">Settings</span>
-        </router-link>
-      </div>
     </aside>
   </template>
   
