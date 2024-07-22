@@ -13,6 +13,8 @@ import SignupPage from '../views/productPage/SignupPage.vue'
 import ProfilePage from '../views/user/ProfilePage.vue'
 import AdminProfilePage from '../views/admin/AdminPage.vue'
 import AllModulProduct from '../views/admin/ModuleProduct.vue'
+import AllConsultation from '../views/admin/ViewsConsultation.vue'
+import AllNews from '../views/admin/ViewsNews.vue'
 import PostModule from '../views/admin/AddModule.vue'
 import PostNews from'../views/admin/addArticle.vue'
 import PostConsultation from'../views/admin/addConsultation.vue'
@@ -20,7 +22,10 @@ import PostProduct from '../views/admin/addProduct.vue'
 import MyCoursePage from '../views/user/Modules/myCoursePage.vue'
 import MyModulePage from '../views/user/Modules/myModulePage'
 import BrowseCourse from '../views/user/BrowseCourse.vue'
-
+import EditModule from '@/views/admin/EditModule.vue'
+import EditProduct from '@/views/admin/EditProduct.vue'
+import EditConsultation from '@/views/admin/EditConsultation.vue'
+import EditArticle from '@/views/admin/EditArticle.vue'
 
 
 const routes = [
@@ -95,6 +100,24 @@ const routes = [
     },
   },
   {
+    path: '/admin/AllConsultation',
+    name: 'AllConsultation',
+    component: AllConsultation,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
+    path: '/admin/AllNews',
+    name: 'AllNews',
+    component: AllNews,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
     path: '/admin/AllModulProduct',
     name: 'AllModulProduct',
     component: AllModulProduct,
@@ -107,6 +130,42 @@ const routes = [
     path: '/admin/addModule',
     name: 'post-module',
     component: PostModule,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
+    path: '/admin/module/:id',
+    name: 'EditModule',
+    component: EditModule,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
+    path: '/admin/product/:id',
+    name: 'EditProduct',
+    component: EditProduct,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
+    path: '/admin/consultation/:id',
+    name: 'EditConsultation',
+    component: EditConsultation,
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
+  },
+  {
+    path: '/admin/news/:id',
+    name: 'EditArticle',
+    component: EditArticle,
     meta: {
       requiresAuth: true,
       requiresAdmin: true,
